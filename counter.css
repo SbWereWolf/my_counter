@@ -1,0 +1,8 @@
+/* mam/my/counter/counter.css */
+[my_lom_theme="light"] {
+	background-color: white;
+}
+
+[my_lom_theme="dark"] {
+	background-color: black;
+}
