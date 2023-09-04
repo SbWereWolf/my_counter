@@ -314,7 +314,6 @@ declare class $my_counter extends $my_lom_view {
     _Count: $my_lom_view;
     Count(): $my_lom_view | $my_lom_input;
     sub(): ($my_lom_view | $my_lom_button | $my_lom_input)[];
-    static mount(): void;
 }
 
 declare namespace $ {

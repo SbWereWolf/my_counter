@@ -166,7 +166,7 @@ class $my_lom_view {
 //my/lom/view/view.ts
 ;
 "use strict";
-Promise.resolve(() => $my_lom_view.mount());
+setTimeout(() => $my_lom_view.mount(), 0);
 //my/lom/view/view.web.ts
 ;
 "use strict";
@@ -515,16 +515,8 @@ class $my_counter extends $my_lom_view {
             this.Inc(),
         ];
     }
-    static mount() {
-        if (typeof document === 'undefined')
-            return;
-        const node = document.querySelector('#root');
-        const obj = new $my_counter();
-        node?.replaceWith(obj.dom_tree());
-        setInterval(() => obj.dom_tree(), 100);
-    }
 }
-$my_counter.mount();
+$my_lom_view.root = () => $my_counter;
 //my/counter/counter.ts
 ;
 "use strict";
